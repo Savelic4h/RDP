@@ -6,11 +6,195 @@
 //                                                    START CODE
 //
 //-----------------------------------------------------------------------------------------------------------
-
-
-
-
-
+.header{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #000;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.header__inner{
+  display: flex;
+  align-items: center;
+}
+.header__logo{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $gold;
+  margin-right: 90px;
+}
+.header__menu{
+  display: flex;
+  align-items: center;
+  margin-right: 65px;
+  li{
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      color: #E3B873;
+    }
+  }
+  li + li{
+    margin-left: 40px;
+  }
+}
+.header__phone-number{
+  margin-right: 45px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: right;
+  text-decoration-line: underline;
+  font-size: 14px;
+  color: $gold;
+}
+.header__btn-popup{
+  padding: 13px 20px;
+}
+#test-form{
+  padding: 45px 20px;
+  border-radius: 13px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: $gold;
+  max-width: 500px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+.test-form__title{
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.test-form__suptitle{
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.test-form__list{
+  button{
+    padding: 10px 50px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+  li{
+    margin-bottom: 20px;
+    color: #000;
+    label{
+      display: block;
+      margin-bottom: 5px;
+    }
+    input{
+      border: none;
+      border-radius: 4px;
+      padding: 8px 20px;
+    }
+  }
+}
+// --------------------------
+.firstPage{
+  color: #fff;
+  padding-top: 195px;
+  padding-bottom: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+  position: relative;
+  .aside-link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    span{
+      font-weight: 400;
+      font-family: 'Roboto', sans-serif;
+      transform: rotate(90deg);
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: $gold;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 50%;
+        right: -110%;
+        transform: translate(-50%,0);
+        width: 51px;
+        height: 1px;
+        background-color: $gold;
+      }
+    }
+  }
+}
+.firstPage__inner{
+  display: flex;
+  align-items: center;
+}
+.firstPage__content{
+  max-width: 505px;
+  margin-left: 55px;
+}
+.firstPage__content-title{
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  span{
+    color: $gold;
+  }
+}
+.firstPage__content-text{
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 41px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+.firstPage__content-btn-price{
+  padding: 13px 26px;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  background: linear-gradient(90deg,#E3B873,#E7B464,#E8AE51,#E3B873);  
+  border: 1px solid transparent;
+  color: #fff;
+  transition: all .2s;
+  &:hover{
+    border: 1px solid #fff;
+    background: transparent;
+  }
+}
+.firstPage__content-btn-popup{
+  padding: 13px 26px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all .2s;
+  &:hover{
+    background: linear-gradient(90deg,#E3B873,#E7B464,#E8AE51,#E3B873);  
+    border: 1px solid transparent;
+  }
+}
 
 
 //-----------------------------------------------------------------------------------------------------------

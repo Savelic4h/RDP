@@ -6,11 +6,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Yeseva+One&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="header__logo" href="#">Repair Design Project</a>
+        <ul class="header__menu">
+          <li class="header__menu-item">Главная<a href="#"></a></li>
+          <li class="header__menu-item">Пpоекты<a href="#"></a></li>
+          <li class="header__menu-item">Замер<a href="#"></a></li>
+          <li class="header__menu-item">Команда<a href="#"></a></li>
+          <li class="header__menu-item">Отзывы<a href="#"></a></li>
+          <li class="header__menu-item">Контакты<a href="#"></a></li>
+        </ul>
+        <a class="header__phone-number" href="tel:79997683299">+7 (999) 768-32-99</a>
+        <a class="header__btn-popup btn popup-with-form" href="#test-form">Заказать звонок</a>
+        <form id="test-form" class="mfp-hide white-popup-block">
+          <div class="test-form__title">Заказать звонок</div>
+          <ul class="test-form__list">
+            <li>
+              <label>Имя</label>
+              <input placeholder="Имя.." required="">
+            </li>
+            <li>
+              <label>Email</label>
+              <input placeholder="Email.." required="">
+            </li>
+            <li>
+              <label>Телефон</label>
+              <input placeholder="Телефон.." required="">
+            </li>
+            <button class="test-form__btn" type="submit">Отправить</button>
+          </ul>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </header>
+  <section class="firstPage wow fadeInRightBig" style="background-image: url(img/FP-bg.jpg);">
+    <div class="container">
+      <div class="firstPage__inner">
+        <div class="firstPage__content ">
+          <div class="firstPage__content-title">турецкий ремонт
+            в <span>Ростове-на-дону</span></div>
+          <div class="firstPage__content-text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до
+            45 дней и 20% от стоимости материалов за счет организации работы</div>
+          <a class="firstPage__content-btn-price" href="#">Рассчитать стоимость</a>
+          <a class="firstPage__content-btn-popup popup-with-form" href="#test-form">Отправить заявку</a>
+          <form id="test-form" class="mfp-hide white-popup-block">
+            <div class="test-form__title">Заказать звонок</div>
+            <ul class="test-form__list">
+              <li>
+                <label>Имя</label>
+                <input placeholder="Имя.." required="">
+              </li>
+              <li>
+                <label>Email</label>
+                <input placeholder="Email.." required="">
+              </li>
+              <li>
+                <label>Телефон</label>
+                <input placeholder="Телефон.." required="">
+              </li>
+              <button class="test-form__btn" type="submit">Отправить</button>
+            </ul>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a class="aside-link wow fadeInDownBig delay-1s" href="#"><span>INSTAGRAM</span></a>
+
+  </section>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

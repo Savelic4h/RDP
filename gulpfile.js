@@ -93,6 +93,8 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/magnific-popup/dist/magnific-popup.css",
+			'node_modules/animate.css/animate.css',
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -108,6 +110,8 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
+			"node_modules/magnific-popup/dist/jquery.magnific-popup.js",
+			'node_modules/wow.js/dist/wow.js',
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

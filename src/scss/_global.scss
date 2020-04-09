@@ -44,6 +44,33 @@ body {
   overflow-x: hidden;
 }
 body{
+  font-weight: 400;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 15px;
+  color: #000;
 }
 .container{
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto; 
+}
+.btn{
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  background: linear-gradient(90deg,#E3B873,#E7B464,#E8AE51,#E3B873);
+  background-size: 400%;
+  color: #fff;
+  &:hover{
+    animation: btn_inim 8s linear;
+  }
+}
+@keyframes btn_inim {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
 }
