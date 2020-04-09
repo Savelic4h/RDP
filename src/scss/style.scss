@@ -110,6 +110,16 @@
   background-size: cover;
   background-color: #000;
   position: relative;
+  &:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2;
+  } 
   .aside-link{
     position: absolute;
     left: 0;
@@ -120,6 +130,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 4;
     span{
       font-weight: 400;
       font-family: 'Roboto', sans-serif;
@@ -145,6 +156,8 @@
 .firstPage__inner{
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 4;
 }
 .firstPage__content{
   max-width: 505px;
@@ -193,6 +206,47 @@
   &:hover{
     background: linear-gradient(90deg,#E3B873,#E7B464,#E8AE51,#E3B873);  
     border: 1px solid transparent;
+  }
+}
+.page-down{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: 40px 90px 40px 48px;
+  background-color: #000;
+  z-index: 5;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 138.6%;
+  &:after{
+    content: "\f107";
+    font-family: 'icomoon';
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: $gold;
+    padding: 5px 8px;
+    border-radius: 50%;
+    border: 1px solid $gold;
+    animation: arrowAnim 1s infinite;
+  }
+}
+@keyframes arrowAnim {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -120%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -60%, 0);
   }
 }
 
