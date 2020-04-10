@@ -17,4 +17,15 @@ $(function () {
   $('.form-agree').on('click', function () {
     $(this).toggleClass('active')
   });
+  $('.projects-slider__inner').slick({
+    arrows: false,
+    dots: false,
+    asNavFor: '.project__slider-thumbs',
+  });
+  $('.project__slider-thumbs').slick({
+    arrows: false,
+    dots: false,
+    asNavFor: '.projects-slider__inner',
+    focusOnSelect: true
+  });
 });
