@@ -112,8 +112,8 @@ gulp.task("script", function () {
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/magnific-popup/dist/jquery.magnific-popup.js",
-			'node_modules/wow.js/dist/wow.js',
 			'node_modules/slick-carousel/slick/slick.min.js',
+			'node_modules/wow.js/dist/wow.js',
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

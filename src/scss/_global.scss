@@ -60,6 +60,8 @@ body{
   border: none;
   cursor: pointer;
   border-radius: 2px;
+  font-size: 15px;
+  line-height: 18px;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   background: linear-gradient(90deg,#E3B873,#E7B464,#E8AE51,#E3B873);
   background-size: 400%;
@@ -74,5 +76,38 @@ body{
   }
   100%{
     background-position: 400%;
+  }
+}
+.title{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+.suptitle{
+  max-width: 30px;
+  height: 28px;
+  margin: 0 auto;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 1px;
+    background-color: $gold;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%);
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 1px;
+    background-color: $gold;
+    top: 50%;
+    right: -100%;
+    transform: translate(50%);
   }
 }
