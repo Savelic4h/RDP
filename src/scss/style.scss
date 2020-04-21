@@ -541,8 +541,7 @@
 .options-suptitle{
   margin-bottom: 31px;
 }
-.options__inner,
-.design__inner{
+.options__inner{
   display: flex;
   flex-wrap: wrap;
 }
@@ -551,8 +550,7 @@
     margin-left: 35px;
   }
 }
-.options__item-img,
-.design-item__img{
+.options__item-img{
   width: 392px;
   height: 421px;
   background-position: center;
@@ -563,8 +561,7 @@
   position: relative;
   margin-bottom: 160px;
 }
-.options__list,
-.design-list{
+.options__list{
   max-width: 330px;
   width: 100%;
   position: absolute;
@@ -603,8 +600,7 @@
   color: #363636;
   margin-bottom: 13px;
 }
-.options-price-btn,
-.design-price-btn{
+.options-price-btn{
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -819,37 +815,7 @@
   position: absolute;
 }
 //-----------------------------------------------------------------------------------------------------------
-.design{
-  padding-top: 120px;
-  height: 720px;
-}
-.design-title{
-  margin-bottom: 35px;
-}
-.design-suptitle{
-  margin-bottom: 38px;
-}
-.design-text{
-  text-align: center;
-  font-size: 20px;
-  line-height: 27px;
-  text-align: center;
-  color: #363636;
-  margin: 0 auto;
-  max-width: 741px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  margin-bottom: 45px;
-}
-.design__inner-item{
-  position: relative;
-}
-.design-item__title{
-  margin-bottom: 9px;
-}
-.design-list{
-  top: 70%;
-}
+
 //-----------------------------------------------------------------------------------------------------------
 .stepByStep{
   background-color: #131313;
@@ -946,9 +912,11 @@
 .team__inner{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .team__item{
   position: relative;
+  max-width: 272px;
 }
 .team__item-photo{
   width: 272px;
@@ -1097,9 +1065,60 @@
 
 //-----------------------------------------------------------------------------------------------------------
 .adress{
-  #test-form{
-    max-width: 883px;   
+  padding-bottom: 65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+  } 
+  .test-form__list {
+    li+li{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+  }
+}
+
+  #test-form-adress{
+    position: relative;
+    z-index: 5;
+    transform: translateY(-50%);
+    max-width: 883px;
+    margin: 0 auto;
+    background-color: #131313;
+    background-image: url(../img/bg-lines.png);
     padding: 34px 181px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    .form-agree{
+      display: inline-block;
+      margin-top: 46px;
+    }
+    .test-form__btn{
+      padding: 20px 54px;
+    }
+    .form-agree-wrapper{
+      text-align: center;
+    }
+  }
+
+.form-list__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  li{
+    max-width: 231px;
+    width: 100%;
   }
 }
 .test-form__title{
@@ -1110,20 +1129,52 @@
   color: #FFFFFF;
   margin-bottom: 45px;
 }
-.test-form__li-wrapper{
+.adress-title{
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  transform: translateY(-100%);
+}
+.adress-text{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gold;
+  max-width: 589px;
+  margin: 0 auto 26px;
+}
+.adress-title__icons{
   display: flex;
-}
-.test-form__name,
-.test-form__phone{
-  width: 50%;
-  input{
-    width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 43px;
+  li{
+    background-color: $gold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    a{
+      color: #ffffff;
+    }
   }
-  label{
-    width: 50%;
+  li + li {
+    margin-left: 20px;
   }
 }
-
+.adress-map{
+  position: relative;
+  padding: 0 20px;
+  z-index: 5;
+  iframe{
+    width: 100%;
+  }
+}
 //-----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE
