@@ -33,12 +33,6 @@ $(function () {
     arrows: true,
     dots: true,
     fade: true,
-    asNavFor: '.stepByStep__slider-thumbs',
-  });
-  $('.stepByStep__slider-thumbs').slick({
-    arrows: false,
-    asNavFor: '.stepByStep__slider-inner',
-    fade: true,
   });
   new WOW().init();
 });
