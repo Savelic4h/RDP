@@ -359,6 +359,7 @@
 }
 .projects__inner{
   display: flex;
+  height: 500px;
 }
 .slick-dots{
   display: flex;
@@ -393,6 +394,7 @@
 }
 .slick-prev,
 .slick-next{
+  cursor: pointer;
   border: none;
   outline: none;
   padding: 0;
@@ -422,6 +424,14 @@
   bottom: 24px;
   &:before{
     content: "\f178";
+  }
+}
+.project__slider-thumbs{
+  max-width: 679px;
+  img{
+    width: 100%;
+    max-width: 679px;
+    max-height: 482px;
   }
 }
 //-----------------------------------------------------------------------------------------------------------
@@ -541,7 +551,8 @@
 .options-suptitle{
   margin-bottom: 31px;
 }
-.options__inner{
+.options__inner,
+.project__inner{
   display: flex;
   flex-wrap: wrap;
 }
@@ -550,18 +561,21 @@
     margin-left: 35px;
   }
 }
-.options__item-img{
+.options__item-img,
+.project__item-img{
   width: 392px;
   height: 421px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.options__item{
+.options__item,
+.project__item{
   position: relative;
   margin-bottom: 160px;
 }
-.options__list{
+.options__list,
+.project__list{
   max-width: 330px;
   width: 100%;
   position: absolute;
@@ -594,13 +608,15 @@
     margin-top: 8px;
   }
 }
-.options__list-title{
+.options__list-title,
+.project__list-title{
   font-size: 18px;
   line-height: 25px;
   color: #363636;
   margin-bottom: 13px;
 }
-.options-price-btn{
+.options-price-btn,
+.project-price-btn{
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -740,49 +756,41 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.8);
     z-index: 2;
   } 
 }
-.realize__inner{
-  display: flex;
-}
-.realize-photo{
-  display: flex;
-  z-index: 5;
-}
-.realize-info__title{
+.realize-title{
   font-size: 27px;
   line-height: 37px;
   text-transform: uppercase;
-  color: #E3B873;
-  max-width: 415px;
+  color: $gold;
   margin-bottom: 47px;
+  max-width: 411px;
+  position: relative;
+  z-index: 5;
 }
-.realize-info__list{
-  font-size: 20px;
-  line-height: 172.4%;
-  color: #FFFFFF;
-  font-weight: 300;
-  font-family: 'Roboto', sans-serif;
-  li + li{
-    margin-top: 7px;
-  }
-  li{
-    cursor: pointer;
-    transition: all .2s;
+.realize-list{
+  position: relative;
+  z-index: 5;
+  max-width: 500px;
+  a{
+    transition: all .1s;
     position: relative;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 172.4%;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
     &:before{
       content: '';
-      transition: all .2s;
-      position: absolute;
+      bottom: 0;
       left: 0;
-      bottom: -5px;
-      width: 120px;
-      background-color: transparent;
+      width: 70%;
       height: 1px;
-
-    }
+      background-color: transparent;
+      position: absolute;
+     }
     &:hover{
       color: $gold;
       &:before{
@@ -790,32 +798,70 @@
       }
     }
   }
+  li + li{
+    margin-top: 14px;
+  } 
 }
-.realize-info{
+.realize-wrapper{
+  display: flex;
+}
+.realize-slider{
+  width: 50%;
+  margin-left: auto;
+  position: relative;
   z-index: 5;
 }
-.realize-photo__column{
-  position: relative;
-  width: 354px;
-  margin-left: 42px;
-}
-.realize__column-img1{
-  transform: translateY(-40%);
-}
-.realize__column-img2{
-  transform: translateY(100%);
-}
-.realize__column-img3{
-  transform: translateY(-80%);
-}
-.realize__column-img4{
-  transform: translateY(12%);
-}
-.realize__column-img{
+.realize-img{
   position: absolute;
 }
+.realize-img1{
+  left: -20%;
+  top: -60%;
+}
+.realize-img2{
+  left: -20%;
+  bottom: -30%;
+}
+.realize-img3{
+  right: 0;
+  top: -70%;
+}
+.realize-img4{
+  right: 0;
+  bottom: -13%;
+}
 //-----------------------------------------------------------------------------------------------------------
-
+.project{
+  padding-top: 153px;
+  margin-bottom: -200px;
+}
+.project-title{
+  margin-bottom: 12px;
+}
+.project-suptitle{
+  margin-bottom: 18px;
+}
+.project-title__text{
+  max-width: 741px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  color: #363636;
+  line-height: 23px;
+  margin-bottom: 44px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+} 
+.project__inner{
+  .project__item + .project__item{
+    margin-left: 35px;
+  }
+}
+.project-price-btn{
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: 100;
+}
 //-----------------------------------------------------------------------------------------------------------
 .stepByStep{
   background-color: #131313;
@@ -882,14 +928,70 @@
 .sliders__wrapper{
   display: flex;
 }
+.stepByStep__slider-thumbs{
+  max-width: 805px;
+  padding: 0 20px;
+  width: 100%;
+}
 .stepByStep__slider-thumbs-img{
   width: 100%;
   max-width: 765px;
+  height: 376px;
+}
+.stepByStep__plan-wrapper{
+  max-width: 765px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: -12px;
+}
+.stepByStep__plan-item{
+  width: 100%;
+  max-width: 255px;
+  margin-bottom: 37px;
+  transition: all .2s;
+}
+.stepByStep__plan-title{
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', sans-serif;
+  color: #FFFFFF;
+  position: relative;
+  margin-bottom: 17px;
+  opacity: 0.1;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 1px;
+    background-color: $gold;
+    left: 0;
+    bottom: -5px;
+  }
+}
+.stepByStep__plan-text{
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  max-width: 127px;
+  opacity: .1;
+}
+.stepByStep__slider-inner{
+  margin-top: -200px;
+}
+.stepByStep__plan-item.active{
+  .stepByStep__plan-text{
+    opacity: 1;
+  }
+  .stepByStep__plan-title{
+    opacity: 1;
+  }
 }
 //-----------------------------------------------------------------------------------------------------------
 .team{
-  margin-top: -385px;
   padding-bottom: 88px;
+  margin-top: -335px;
 }
 .team-title{
   color: #ffffff;

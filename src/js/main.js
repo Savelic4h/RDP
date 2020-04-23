@@ -19,20 +19,27 @@ $(function () {
   $('.projects-slider__inner').slick({
     arrows: true,
     dots: true,
-    asNavFor: '.project__slider-thumbs',
     fade: true,
+    asNavFor: '.project__slider-thumbs',
   });
   $('.project__slider-thumbs').slick({
     arrows: false,
     dots: false,
-    asNavFor: '.projects-slider__inner',
     focusOnSelect: true,
     fade: true,
+    asNavFor: '.projects-slider__inner',
   });
   $('.stepByStep__slider-inner').slick({
-    arrows: true,
+    arrows: false,
     dots: true,
     fade: true,
+    asNavFor: '.stepByStep__slider-thumbs',
   });
+  $('.stepByStep__slider-thumbs').slick({
+    arrows: false,
+    dots: false,
+    fade: true,
+    asNavFor: '.stepByStep__slider-inner',
+  })
   new WOW().init();
 });
