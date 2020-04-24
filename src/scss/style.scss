@@ -960,7 +960,6 @@
   color: #FFFFFF;
   position: relative;
   margin-bottom: 17px;
-  opacity: 0.1;
   &:before{
     content: '';
     position: absolute;
@@ -975,19 +974,11 @@
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
   max-width: 127px;
-  opacity: .1;
 }
 .stepByStep__slider-inner{
   margin-top: -200px;
 }
-.stepByStep__plan-item.active{
-  .stepByStep__plan-text{
-    opacity: 1;
-  }
-  .stepByStep__plan-title{
-    opacity: 1;
-  }
-}
+
 //-----------------------------------------------------------------------------------------------------------
 .team{
   padding-bottom: 88px;
